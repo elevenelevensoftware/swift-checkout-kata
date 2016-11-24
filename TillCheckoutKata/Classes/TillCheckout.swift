@@ -20,15 +20,19 @@ class TillCheckout {
     
     func getIndividualItemPrice(input: String) -> Double {
         
-        var result = 0.0
+        var result: Double
         
-        if(input == productCodeA) {
+        switch input {
+            
+        case productCodeA:
             result = productCodeAPrice
-        } else if(input == productCodeB) {
+        case productCodeB:
             result = productCodeBPrice
-        } else if(input == productCodeC) {
+        case productCodeC:
             result = productCodeCPrice
-        }
+        default:
+            result = 0.0
+       }
         
         return result
     }
