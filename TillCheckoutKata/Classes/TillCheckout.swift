@@ -10,31 +10,14 @@ import Foundation
 
 class TillCheckout {
     
-    let productCodeA = "A"
-    let productCodeB = "B"
-    let productCodeC = "C"
-    
-    let productCodeAPrice = 0.50
-    let productCodeBPrice = 0.30
-    let productCodeCPrice = 0.60
+    let productLookUpDictionary: [String: Double] = [
+        "A": 0.50,
+        "B": 0.30,
+        "C": 0.60,
+        "D": 0.99
+    ]
     
     func getIndividualItemPrice(input: String) -> Double {
-        
-        var result: Double
-        
-        switch input {
-            
-        case productCodeA:
-            result = productCodeAPrice
-        case productCodeB:
-            result = productCodeBPrice
-        case productCodeC:
-            result = productCodeCPrice
-        default:
-            result = 0.0
-       }
-        
-        return result
+        return productLookUpDictionary[input]!
     }
-    
 }

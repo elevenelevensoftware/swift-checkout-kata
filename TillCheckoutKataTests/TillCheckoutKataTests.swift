@@ -40,6 +40,10 @@ class TillCheckoutKataTests: XCTestCase {
     func testProductWithCodeC_ShouldCostSixtyPence() {
         let result = tillCheckout.getIndividualItemPrice(input: "C")
         XCTAssertEqual(result, 0.60)
-
+    }
+    
+    func testProductWithCodeD_ShouldCostNinetyNinePence() {
+        let result = tillCheckout.getIndividualItemPrice(input: "D")
+        XCTAssertEqual(result, 0.99)
     }
 }
