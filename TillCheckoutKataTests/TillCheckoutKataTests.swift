@@ -31,4 +31,15 @@ class TillCheckoutKataTests: XCTestCase {
         let result = tillCheckout.getIndividualItemPrice(input: "A")
         XCTAssertEqual(result, 0.50)
     }
+    
+    func testProductWithCodeB_ShouldCostThirtyPence() {
+        let result = tillCheckout.getIndividualItemPrice(input: "B")
+        XCTAssertEqual(result, 0.30)
+    }
+    
+    func testProductWithCodeC_ShouldCostSixtyPence() {
+        let result = tillCheckout.getIndividualItemPrice(input: "C")
+        XCTAssertEqual(result, 0.60)
+
+    }
 }

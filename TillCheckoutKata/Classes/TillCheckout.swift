@@ -11,7 +11,12 @@ import Foundation
 class TillCheckout {
     
     let productCodeA = "A"
+    let productCodeB = "B"
+    let productCodeC = "C"
+    
     let productCodeAPrice = 0.50
+    let productCodeBPrice = 0.30
+    let productCodeCPrice = 0.60
     
     func getIndividualItemPrice(input: String) -> Double {
         
@@ -19,6 +24,10 @@ class TillCheckout {
         
         if(input == productCodeA) {
             result = productCodeAPrice
+        } else if(input == productCodeB) {
+            result = productCodeBPrice
+        } else if(input == productCodeC) {
+            result = productCodeCPrice
         }
         
         return result
