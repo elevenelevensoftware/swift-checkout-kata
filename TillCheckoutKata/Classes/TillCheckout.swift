@@ -20,4 +20,15 @@ class TillCheckout {
     func getIndividualItemPrice(input: String) -> Double {
         return productLookUpDictionary[input]!
     }
+    
+    func scanItemsThroughTill(items: [String]) -> [String: Int] {
+        
+        var scannedItemsDictionary: [String: Int] = [:]
+        
+        for item in items {
+            scannedItemsDictionary[item] = (scannedItemsDictionary[item] ?? 0) + 1
+        }
+        
+        return scannedItemsDictionary
+    }
 }

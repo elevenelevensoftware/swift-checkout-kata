@@ -4,11 +4,9 @@
 //
 //  Created by Ian Wells on 24/11/2016.
 //  Copyright © 2016 eleven:eleven software. All rights reserved.
-
-//  The code will be used by an electronic till that can only scan one item at a time. At the end of scanning the items the till system will request the total.
-//  Goods are priced individually, however there are weekly special offers for when multiple items are bought. For example “A is 50 each or 3 for 130”.
-//  Weekly offers change frequently. The initial prices and offers are as follows:
 //
+//  For more details see: http://manchester-codejo.com/kata/Checkout/
+
 
 import XCTest
 @testable import TillCheckoutKata
@@ -45,5 +43,14 @@ class TillCheckoutKataTests: XCTestCase {
     func testProductWithCodeD_ShouldCostNinetyNinePence() {
         let result = tillCheckout.getIndividualItemPrice(input: "D")
         XCTAssertEqual(result, 0.99)
+    }
+    
+    func testGivenDuplicateItemsToScanThenShouldGiveTotalNoOfDuplicateItems() {
+        let itemsToBuy = ["A","A","A","B","B","C","D"]
+        let result = tillCheckout.scanItemsThroughTill(items: itemsToBuy)
+        XCTAssertEqual(result["A"], 3)
+        XCTAssertEqual(result["B"], 2)
+        XCTAssertEqual(result["C"], 1)
+        XCTAssertEqual(result["D"], 1)
     }
 }
