@@ -13,6 +13,7 @@
 		33A562011DE72B90006368E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33A562001DE72B90006368E2 /* Assets.xcassets */; };
 		33A562041DE72B90006368E2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33A562021DE72B90006368E2 /* LaunchScreen.storyboard */; };
 		33A5620F1DE72B90006368E2 /* TillCheckoutKataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A5620E1DE72B90006368E2 /* TillCheckoutKataTests.swift */; };
+		33A5621A1DE730C0006368E2 /* TillCheckout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A562191DE730C0006368E2 /* TillCheckout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		33A5620A1DE72B90006368E2 /* TillCheckoutKataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TillCheckoutKataTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		33A5620E1DE72B90006368E2 /* TillCheckoutKataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TillCheckoutKataTests.swift; sourceTree = "<group>"; };
 		33A562101DE72B90006368E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		33A562191DE730C0006368E2 /* TillCheckout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TillCheckout.swift; path = Classes/TillCheckout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 				33A562001DE72B90006368E2 /* Assets.xcassets */,
 				33A562021DE72B90006368E2 /* LaunchScreen.storyboard */,
 				33A562051DE72B90006368E2 /* Info.plist */,
+				33A562191DE730C0006368E2 /* TillCheckout.swift */,
 			);
 			path = TillCheckoutKata;
 			sourceTree = "<group>";
@@ -199,6 +202,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33A5621A1DE730C0006368E2 /* TillCheckout.swift in Sources */,
 				33A561FC1DE72B90006368E2 /* ViewController.swift in Sources */,
 				33A561FA1DE72B90006368E2 /* AppDelegate.swift in Sources */,
 			);

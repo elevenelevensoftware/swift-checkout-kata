@@ -4,12 +4,18 @@
 //
 //  Created by Ian Wells on 24/11/2016.
 //  Copyright © 2016 eleven:eleven software. All rights reserved.
+
+//  The code will be used by an electronic till that can only scan one item at a time. At the end of scanning the items the till system will request the total.
+//  Goods are priced individually, however there are weekly special offers for when multiple items are bought. For example “A is 50 each or 3 for 130”.
+//  Weekly offers change frequently. The initial prices and offers are as follows:
 //
 
 import XCTest
 @testable import TillCheckoutKata
 
 class TillCheckoutKataTests: XCTestCase {
+    
+    let tillCheckout = TillCheckout()
     
     override func setUp() {
         super.setUp()
@@ -21,16 +27,8 @@ class TillCheckoutKataTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testProductWithCodeA_ShouldCostFiftyPence() {
+        let result = tillCheckout.getIndividualItemPrice(input: "A")
+        XCTAssertEqual(result, 0.50)
     }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-    
 }
