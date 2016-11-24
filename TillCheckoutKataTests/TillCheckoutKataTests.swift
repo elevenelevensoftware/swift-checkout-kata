@@ -46,11 +46,11 @@ class TillCheckoutKataTests: XCTestCase {
     }
     
     func testGivenDuplicateItemsToScanThenShouldGiveTotalNoOfDuplicateItems() {
-        let itemsToBuy = ["A","A","A","B","B","C","D"]
+        let itemsToBuy = ["D","D","A","A","A","B","B","C","D","C","C","C"]
         let result = tillCheckout.scanItemsThroughTill(items: itemsToBuy)
         XCTAssertEqual(result["A"], 3)
         XCTAssertEqual(result["B"], 2)
-        XCTAssertEqual(result["C"], 1)
-        XCTAssertEqual(result["D"], 1)
+        XCTAssertEqual(result["C"], 4)
+        XCTAssertEqual(result["D"], 3)
     }
 }
