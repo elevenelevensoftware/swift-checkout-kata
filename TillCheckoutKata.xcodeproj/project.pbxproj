@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3390F6591DE7979700ABAEAC /* SpecialOffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3390F6581DE7979700ABAEAC /* SpecialOffer.swift */; };
 		33A561FA1DE72B90006368E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A561F91DE72B90006368E2 /* AppDelegate.swift */; };
 		33A561FC1DE72B90006368E2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A561FB1DE72B90006368E2 /* ViewController.swift */; };
 		33A561FF1DE72B90006368E2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33A561FD1DE72B90006368E2 /* Main.storyboard */; };
@@ -27,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3390F6581DE7979700ABAEAC /* SpecialOffer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SpecialOffer.swift; path = Classes/SpecialOffer.swift; sourceTree = "<group>"; };
 		33A561F61DE72B8F006368E2 /* TillCheckoutKata.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TillCheckoutKata.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33A561F91DE72B90006368E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		33A561FB1DE72B90006368E2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 				33A562021DE72B90006368E2 /* LaunchScreen.storyboard */,
 				33A562051DE72B90006368E2 /* Info.plist */,
 				33A562191DE730C0006368E2 /* TillCheckout.swift */,
+				3390F6581DE7979700ABAEAC /* SpecialOffer.swift */,
 			);
 			path = TillCheckoutKata;
 			sourceTree = "<group>";
@@ -202,6 +205,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3390F6591DE7979700ABAEAC /* SpecialOffer.swift in Sources */,
 				33A5621A1DE730C0006368E2 /* TillCheckout.swift in Sources */,
 				33A561FC1DE72B90006368E2 /* ViewController.swift in Sources */,
 				33A561FA1DE72B90006368E2 /* AppDelegate.swift in Sources */,
@@ -410,6 +414,7 @@
 				33A562151DE72B90006368E2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		33A562161DE72B90006368E2 /* Build configuration list for PBXNativeTarget "TillCheckoutKataTests" */ = {
 			isa = XCConfigurationList;
@@ -418,6 +423,7 @@
 				33A562181DE72B90006368E2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -31,4 +31,26 @@ class TillCheckout {
         
         return scannedItemsDictionary
     }
+    
+    func applySpecialOfferDiscount(groupedItems: [String: Int]) -> Double {
+        
+        var result: Double = 0.0
+        
+        let specialOffer: [SpecialOffer] = [
+            SpecialOffer(productCode: "A", noOfItemsForDiscount: 3, specialOfferDiscount: 0.30),
+            SpecialOffer(productCode: "B", noOfItemsForDiscount: 2, specialOfferDiscount: 0.15)
+        ]
+        
+        for offer in specialOffer {
+            
+            if(groupedItems[offer.productCode] != nil) {
+                if(groupedItems[offer.productCode]! % offer.noOfItemsForDiscount == 0) {
+                    let costBeforeDiscount = getIndividualItemPrice(input: offer.productCode) * Double(groupedItems[offer.productCode]!)
+                    result = costBeforeDiscount - Double(offer.specialOfferDiscount)
+                }
+            }
+        }
+        
+        return result
+    }
 }

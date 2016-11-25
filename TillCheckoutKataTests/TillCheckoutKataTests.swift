@@ -14,7 +14,7 @@ import XCTest
 class TillCheckoutKataTests: XCTestCase {
     
     let tillCheckout = TillCheckout()
-    
+        
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -52,5 +52,11 @@ class TillCheckoutKataTests: XCTestCase {
         XCTAssertEqual(result["B"], 2)
         XCTAssertEqual(result["C"], 4)
         XCTAssertEqual(result["D"], 3)
+    }
+    
+    func testGivenDuplicateItemsThatAreOnOfferTheShouldApplyDiscount() {
+        let groupedItems = tillCheckout.scanItemsThroughTill(items: ["A","A","A"])
+        let totalCostWithDiscountApplied = tillCheckout.applySpecialOfferDiscount(groupedItems: groupedItems)
+        XCTAssertEqual(totalCostWithDiscountApplied, 1.20)
     }
 }
